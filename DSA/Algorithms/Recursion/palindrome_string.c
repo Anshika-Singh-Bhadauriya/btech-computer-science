@@ -2,6 +2,7 @@
 // Approach: Compare characters at the start and end indices;
 // if they match, recurse inward; if they don't, it's not a palindrome.
 
+
 import java.util.Scanner;
 
 public class PalindromeCheck {
