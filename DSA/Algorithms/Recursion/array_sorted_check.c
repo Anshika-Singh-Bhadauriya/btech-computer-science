@@ -3,33 +3,35 @@
 // out of order, it's not sorted. Base case: reaching the last index
 // means every pair before it was in order.
 
-#include<stdio.h>
+import java.util.Scanner;
 
-int isSorted(int arr[], int n, int i){
-    if(i == n-1){
-        return 1;
+public class ArraySortedCheck {
+
+    static void isSorted(int[] arr, int n, int i){
+        if(i == n-1){
+            System.out.print("\narray is sorted");
+            return;
+        }
+        else if(arr[i] <= arr[i+1]){
+            i++;
+            isSorted(arr, n, i);
+        }
+        else{
+            System.out.print("\narray is not sorted");
+            return;
+        }
     }
-    if(arr[i] > arr[i+1]){
-        return 0;
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter size of array:");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        System.out.print("\nenter array elements:");
+        for(int i=0; i<n; i++)
+            arr[i] = sc.nextInt();
+
+        isSorted(arr, n, 0);
     }
-    return isSorted(arr, n, i+1);
-}
-
-int main(){
-    int n;
-    printf("enter size of array:");
-    scanf("%d", &n);
-
-    int arr[n];
-    printf("\nenter array elements:");
-    for(int i=0; i<n; i++)
-        scanf("%d", &arr[i]);
-
-    int result = isSorted(arr, n, 0);
-    if(result == 1)
-        printf("\narray is sorted");
-    else
-        printf("\narray is not sorted");
-
-    return 0;
 }
