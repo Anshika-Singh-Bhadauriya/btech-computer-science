@@ -68,6 +68,7 @@ Contains my solutions to coding problems from HackerRank and Leetcode.
 | Arrays      | 0  | 0    |
 | Linked List | 1  | 0    |
 | Sorting     | 0  | 0    |
+
 *(Updated as I go — see individual folders for code.)*
 
 ## 📄 License
