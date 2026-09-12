@@ -1,36 +1,36 @@
 // Problem: Count the number of occurrences of a target element in an array, using recursion.
-// Approach: Check if the current element matches; add 1 if it does,
-// then add the count from the rest of the array (found recursively).
+// Approach: Accumulator pattern — carry a running count forward as a
+// parameter, incrementing it whenever the current element matches.
 
-#include<stdio.h>
+import java.util.Scanner;
 
-int countOccurrences(int arr[], int n, int target, int i){
-    if(i == n){
-        return 0;
+public class CountOccurrences {
+
+    static int countOccurrences(int[] arr, int n, int i, int target, int count){
+        if(i == n){
+            return count;
+        }
+        if(arr[i] == target){
+            count++;
+        }
+        return countOccurrences(arr, n, i+1, target, count);
     }
-    int countRest = countOccurrences(arr, n, target, i+1);
-    if(arr[i] == target)
-        return 1 + countRest;
-    else
-        return countRest;
-}
 
-int main(){
-    int n;
-    printf("enter size of array:");
-    scanf("%d", &n);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter size of array:");
+        int n = sc.nextInt();
 
-    int arr[n];
-    printf("\nenter array elements:");
-    for(int i=0; i<n; i++)
-        scanf("%d", &arr[i]);
+        int[] arr = new int[n];
+        System.out.print("\nenter array elements:");
+        for(int i=0; i<n; i++)
+            arr[i] = sc.nextInt();
 
-    int target;
-    printf("\nenter target element:");
-    scanf("%d", &target);
+        int target;
+        System.out.print("\nenter target element:");
+        target = sc.nextInt();
 
-    int result = countOccurrences(arr, n, target, 0);
-    printf("\nelement occurs %d time(s)", result);
-
-    return 0;
+        int result = countOccurrences(arr, n, 0, target, 0);
+        System.out.print("\nelement occurs " + result + " time(s)");
+    }
 }
