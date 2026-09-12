@@ -1,6 +1,7 @@
 // Problem: Reverse a string using recursion.
 // Approach: Two pointers (start and end). Swap characters at both ends,
 // then recurse inward until the pointers meet or cross.
+// Note: Java Strings are immutable, so we convert to a char array first.
 
 import java.util.Scanner;
 
