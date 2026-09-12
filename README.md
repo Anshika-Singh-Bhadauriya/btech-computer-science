@@ -2,7 +2,7 @@
 Welcome to my repository! This space is used to track my programming progress, active problem-solving, and university coursework.
 
 ## 🛠️ Technical Skills
-* **Programming Languages:** C (Core Foundations)
+* **Programming Languages:** C (Core Foundations) and Java (Primary language for DSA practice,conests, and interview prep)
 * **Core Domains:** Data Structures & Algorithms (DSA)
 
 ## ▶️ How to Run the Code
@@ -19,8 +19,8 @@ java FileName
 ```
 
 ## 🎯 Active Focus
-* 💻 **Practice:** Solving DSA challenges.
-* ☕ **Java Programming:** Learning and preparing for second-year coursework.
+* 💻 Solving DSA challenges-targeting 600+ solved before final-year placements.
+* ☕ Migrating DSA practice from C to Java for interviews and contests.
 
 ## 📂 Repository Structure
 
@@ -62,10 +62,11 @@ Coding-Platforms/
 Contains my solutions to coding problems from HackerRank and Leetcode.
 
 ## 📊 Progress Snapshot
-- Recursion: 13 problems solved
-- Arrays: 0 problems solved
-- Linked List: 1 problem solved
-- Sorting: 0 problems solved
+Topic	     C	   Java
+Recursion	 13	    0
+Arrays	     0	    0
+Linked List	 1	    0
+Sorting	     0	    0
 
 *(Updated as I go — see individual folders for code.)*
 
