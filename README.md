@@ -62,12 +62,12 @@ Coding-Platforms/
 Contains my solutions to coding problems from HackerRank and Leetcode.
 
 ## 📊 Progress Snapshot
-Topic	     C	   Java
-Recursion	 13	    0
-Arrays	     0	    0
-Linked List	 1	    0
-Sorting	     0	    0
-
+| Topic       | C  | Java |
+|-------------|----|----- |
+| Recursion   | 5  | 0    |
+| Arrays      | 0  | 0    |
+| Linked List | 1  | 0    |
+| Sorting     | 0  | 0    |
 *(Updated as I go — see individual folders for code.)*
 
 ## 📄 License
