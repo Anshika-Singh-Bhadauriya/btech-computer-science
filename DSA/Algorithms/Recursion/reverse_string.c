@@ -2,28 +2,27 @@
 // Approach: Two pointers (start and end). Swap characters at both ends,
 // then recurse inward until the pointers meet or cross.
 
-#include<stdio.h>
-#include<string.h>
+import java.util.Scanner;
 
-void reverseString(char str[], int start, int end){
-    if(start >= end){
-        return;
+public class ReverseString {
+
+    static void reverseString(char[] str, int start, int end){
+        if(start >= end){
+            System.out.println("\nreversed string=" + new String(str));
+            return;
+        }
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        reverseString(str, start+1, end-1);
     }
-    char temp = str[start];
-    str[start] = str[end];
-    str[end] = temp;
-    reverseString(str, start+1, end-1);
-}
 
-int main(){
-    char str[100];
-    printf("enter string:");
-    fgets(str, 100, stdin);
-    str[strcspn(str, "\n")] = '\0';
-
-    int end = strlen(str) - 1;
-    reverseString(str, 0, end);
-
-    printf("\nreversed string: %s", str);
-    return 0;
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter string:");
+        String input = sc.nextLine();
+        char[] str = input.toCharArray();
+        int end = str.length - 1;
+        reverseString(str, 0, end);
+    }
 }
