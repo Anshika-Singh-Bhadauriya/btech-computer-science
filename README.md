@@ -64,7 +64,7 @@ Contains my solutions to coding problems from HackerRank and Leetcode.
 ## 📊 Progress Snapshot
 | Topic       | Java |
 |-------------|----- |
-| Recursion   | 5    |
+| Recursion   | 8    |
 | Arrays      | 0    |
 | String      | 0    |
 | Sorting     | 0    |
